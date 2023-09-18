@@ -1,0 +1,58 @@
+name: media_kit_test
+description: A minimal application for demonstrating & testing package:media_kit
+homepage: https://github.com/media-kit/media-kit
+repository: https://github.com/media-kit/media-kit
+version: 1.0.0
+publish_to: none
+
+environment:
+  sdk: ">=2.17.0 <4.0.0"
+
+dependencies:
+  flutter:
+    sdk: flutter
+
+  media_kit:
+    path: ../media_kit
+  media_kit_video:
+    path: ../media_kit_video
+  media_kit_libs_video:
+    path: ../libs/universal/media_kit_libs_video
+
+  path: ^1.8.2
+  file_picker: ^5.2.4
+  path_provider: ^2.0.14
+  http: ">=0.13.0 <2.0.0"
+  universal_platform: ^1.0.0+1
+
+dependency_overrides:
+  # Force dependency overrides for all (direct or transitive) dependencies
+  media_kit:
+    path: ../media_kit
+  media_kit_video:
+    path: ../media_kit_video
+
+  media_kit_native_event_loop:
+    path: ../media_kit_native_event_loop
+
+  media_kit_libs_video:
+    path: ../libs/universal/media_kit_libs_video
+
+  media_kit_libs_android_video:
+    path: ../libs/android/media_kit_libs_android_video
+  media_kit_libs_ios_video:
+    path: ../libs/ios/media_kit_libs_ios_video
+  media_kit_libs_macos_video:
+    path: ../libs/macos/media_kit_libs_macos_video
+  media_kit_libs_windows_video:
+    path: ../libs/windows/media_kit_libs_windows_video
+  media_kit_libs_linux:
+    path: ../libs/linux/media_kit_libs_linux
+
+dev_dependencies:
+  flutter_test:
+    sdk: flutter
+  flutter_lints: ^2.0.0
+
+flutter:
+  uses-material-design: true
